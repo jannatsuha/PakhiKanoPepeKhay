@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Virtual Doctor</string>
+    <string name="username">16a1c6bb-6f56-4bba-96a0-2364f42c2fa0</string>
+    <string name="password">TD3LMQd1ZARo</string>
+    <string name="workspace">a6d8c44e-4ee5-4712-9d7d-d253ba03c2eb</string>
+    <string name="workspace2">a3e51aa8-e863-45e8-a30c-5504a7b3b0a3</string>
+
+    <string name="ErrorLog">Please enter Email</string>
+    <string name="ErrorLog2">Please enter Password</string>
+    <string name="error_common">This field can not be empty</string>
+    <string name="error_common2">This field can not be empty with at least 6 character </string>
+    <string name="password_mismatch">Password mismatch</string>
+
+    <string name="buttonWidth">320dp</string>
+    <string name="buttonLenghth">60dp</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
