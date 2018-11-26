@@ -29,7 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuSelection" />
-        <activity android:name=".SpecialistsNameActivity"></activity>
+        <activity android:name=".SpecialistsNameActivity" />
+        <activity android:name=".Anesthesiology"></activity>
     </application>
 
 </manifest>
