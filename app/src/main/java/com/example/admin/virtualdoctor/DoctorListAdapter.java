@@ -60,9 +60,12 @@ public class DoctorListAdapter extends RecyclerView.Adapter<com.example.admin.vi
                             context.startActivity(intent1);
 
                         }else if(getLayoutPosition()==1){
-                            //Do whatever you want here
+                            Intent i = new Intent(context,BurnAndSurgery.class);
+                            context.startActivity(i);
 
                         }else if(getLayoutPosition()==2){
+                            Intent i = new Intent(context,BreastSurgeon.class);
+                            context.startActivity(i);
 
                         }else if(getLayoutPosition()==3){
 

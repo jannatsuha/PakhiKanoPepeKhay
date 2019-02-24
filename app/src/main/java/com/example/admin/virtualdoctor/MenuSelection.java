@@ -17,7 +17,7 @@ public class MenuSelection extends AppCompatActivity {
     ArrayList<String> list;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
-    DoctorModel doctorModel;
+    DoctorModel doctorModel,doctorModel2,doctorModel3;
 
 
 
@@ -53,11 +53,26 @@ public class MenuSelection extends AppCompatActivity {
     }
 
     public void temporary(View view) {
-        String chatkey= databaseReference.push().getKey();
-       // doctorModel=new DoctorModel("Dr. Shah Muhammad Ali","MBBS, FCPS","Consultant at SQUARE Hospitals Ltd","SQUARE Hospitals Ltd","18/F West Panthapath, Dhaka - 1205, Bangladesh","+880-2-8159457");
-        // doctorModel=new DoctorModel("Professor Dr. Kazi Mesbahuddin lqbal","MBBS, DA, FFARCS (Ireland), FRCA (USA)","Coordinator & Senior Consultant at Apollo Hospitals Dhaka", " Apollo Hospitals Dhaka","Plot # 81, Block # E, Basudhara R/A, Dhaka - 1229","+880-2-8401661");
-        //doctorModel=new DoctorModel("","","", "","","");
-       // databaseReference.child("DoctorList").child("ApolloHospitalDhaka").child("Anesthesiology").child(chatkey).setValue(doctorModel);
+//        String chatkey= databaseReference.push().getKey();
+//        String chatkey2= databaseReference.push().getKey();
 
+        Intent intent1 = new Intent(MenuSelection.this, Temp_Doctor_Add.class);
+        startActivity(intent1);
+
+//        doctorModel2=new DoctorModel("Dr. Md. Mozaffer Hossain","DA, FCPS ( Anaesthesiology )",
+//                "Assistant Professor at Dhaka Medical College & Hospital","City Hospital Ltd",
+//                "1/8, Block-E, Lalmatia, SatMasjid Road, Dhaka - 1217","+880-2-9124436");
+//         doctorModel=new DoctorModel("Dr. Dilip Kumar Saha", "MBBS, DA, MD",
+//                 "Associate Professor and Head at National Institute of ENT", "National Institute of ENT",
+//                 "National Institute of ENT, Tejgaon, Dhaka","+880 1724665568");
+        //doctorModel=new DoctorModel("","","", "","","");
+//        databaseReference.child("DoctorList").child("OthersHospital").child("Anesthesiology").child(chatkey).setValue(doctorModel);
+        //databaseReference.child("DoctorList").child("CityHospitalLtd").child("Anesthesiology").child(chatkey2).setValue(doctorModel2);
+
+    }
+
+    public void goToMedicineDetailsWeb(View view) {
+        Intent intent1 = new Intent(MenuSelection.this, WebViewPage.class);
+        startActivity(intent1);
     }
 }

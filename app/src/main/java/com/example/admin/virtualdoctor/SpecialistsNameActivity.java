@@ -30,7 +30,7 @@ public class SpecialistsNameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_specialists_name);
-
+        this.setTitle("All Specialists List");
         searchView=findViewById(R.id.searchview);
         list=new ArrayList<SpecialistsModel>();
         list2=new ArrayList<String>();
@@ -47,12 +47,12 @@ public class SpecialistsNameActivity extends AppCompatActivity {
 //                    String s = dataSnapshot2.getValue(String.class);
 //                    list2.add(s);
 //                    Toast.makeText(SpecialistsNameActivity.this, s, Toast.LENGTH_LONG).show();
-////                    int newMsgPosition = list2.size() - 1;
-////                    recyclerView.scrollToPosition(newMsgPosition);
+//                  int newMsgPosition = list2.size() - 1;
+//                    recyclerView.scrollToPosition(newMsgPosition);
 //
 //                }
-////                adapter= new DoctorListAdapter(SpecialistsNameActivity.this,list2);
-////                recyclerView.setAdapter(adapter);
+//                adapter= new DoctorListAdapter(SpecialistsNameActivity.this,list2);
+//                recyclerView.setAdapter(adapter);
 //            }
 //
 //            @Override
@@ -60,6 +60,7 @@ public class SpecialistsNameActivity extends AppCompatActivity {
 //
 //            }
 //        });
+
 
         list2.clear();
         list2.add("Anesthesiology Specialist");            list2.add("Burn Specialist");
@@ -80,8 +81,6 @@ public class SpecialistsNameActivity extends AppCompatActivity {
 
         adapter= new DoctorListAdapter(SpecialistsNameActivity.this,list2);
         recyclerView.setAdapter(adapter);
-
-
 
     }
 }

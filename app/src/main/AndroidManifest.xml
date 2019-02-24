@@ -30,7 +30,13 @@
         </activity>
         <activity android:name=".MenuSelection" />
         <activity android:name=".SpecialistsNameActivity" />
-        <activity android:name=".Anesthesiology"></activity>
+        <activity
+            android:name=".Anesthesiology"
+            android:noHistory="true" />
+        <activity android:name=".BurnAndSurgery" />
+        <activity android:name=".WebViewPage" />
+        <activity android:name=".Temp_Doctor_Add" />
+        <activity android:name=".BreastSurgeon"></activity>
     </application>
 
 </manifest>

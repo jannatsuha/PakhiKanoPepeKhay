@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
                         getString(R.string.password)
                 );
 
-
         sendImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
