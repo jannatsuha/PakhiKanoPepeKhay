@@ -19,6 +19,18 @@
 
         </android.support.v7.widget.RecyclerView>
 
+        <Button
+            android:id="@+id/invisibleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:text="Click here for Specialists"/>
+
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:background="@color/colorPrimaryDark"
@@ -44,6 +56,7 @@
                 android:layout_weight="5"
                 android:padding="4dp"
                 android:src="@android:drawable/ic_menu_send" />
+
         </LinearLayout>
 
 

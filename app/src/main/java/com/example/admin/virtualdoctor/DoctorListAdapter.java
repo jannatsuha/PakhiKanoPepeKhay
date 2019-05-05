@@ -55,7 +55,8 @@ public class DoctorListAdapter extends RecyclerView.Adapter<com.example.admin.vi
                 btnSpcListName.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if(getLayoutPosition()==0){
+                        if(getLayoutPosition()==0)
+                        {
                             Intent intent1 = new Intent(context, Anesthesiology.class);
                             context.startActivity(intent1);
 
@@ -68,10 +69,40 @@ public class DoctorListAdapter extends RecyclerView.Adapter<com.example.admin.vi
                             context.startActivity(i);
 
                         }else if(getLayoutPosition()==3){
+                            Intent i = new Intent(context,Cardiology.class);
+                            context.startActivity(i);
 
                         }else if(getLayoutPosition()==4){
+                            Intent i = new Intent(context,Cancer.class);
+                            context.startActivity(i);
 
                         }else if(getLayoutPosition()==5){
+                            Intent i = new Intent(context,CardiovascularAndThoracicSurgeon.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==6){
+                            Intent i = new Intent(context,Asthma.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==7){
+                            Intent i = new Intent(context,PediatricCardiology.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==8){
+                            Intent i = new Intent(context,Dental.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==9){
+                            Intent i = new Intent(context,Dermatology.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==10){
+                            Intent i = new Intent(context,Diabetes.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==11){
+                            Intent i = new Intent(context,Eye.class);
+                            context.startActivity(i);
 
                         }
                     }

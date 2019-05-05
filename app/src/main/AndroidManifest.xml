@@ -36,7 +36,17 @@
         <activity android:name=".BurnAndSurgery" />
         <activity android:name=".WebViewPage" />
         <activity android:name=".Temp_Doctor_Add" />
-        <activity android:name=".BreastSurgeon"></activity>
+        <activity android:name=".BreastSurgeon" />
+        <activity android:name=".Cardiology" />
+        <activity android:name=".Cancer" />
+        <activity android:name=".CardiovascularAndThoracicSurgeon" />
+        <activity android:name=".Asthma" />
+        <activity android:name=".PediatricCardiology" />
+        <activity android:name=".ColorectalSurgery" />
+        <activity android:name=".Dental" />
+        <activity android:name=".Dermatology" />
+        <activity android:name=".Diabetes" />
+        <activity android:name=".Eye"></activity>
     </application>
 
 </manifest>

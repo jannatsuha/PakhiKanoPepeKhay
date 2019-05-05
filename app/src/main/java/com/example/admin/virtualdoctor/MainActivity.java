@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     String inputText;
     String outputText;
     ChatModel chatModel;
+    Button btnInvisisble;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
     UserData userData;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         etTypingMsg=findViewById(R.id.etTypeMsg);
         sendImg=findViewById(R.id.sendImg);
         recyclerView=findViewById(R.id.myRecyclerview);
+        btnInvisisble=findViewById(R.id.invisibleButton);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list=new ArrayList<ChatModel>();
@@ -120,8 +122,7 @@ public class MainActivity extends AppCompatActivity {
                                 .inputText(inputText)
                                 .build();
 
-        myConversationService
-                                .message(getString(R.string.workspace), request)
+        myConversationService.message(getString(R.string.workspace), request)
                                 .enqueue(new ServiceCallback<MessageResponse>() {
                                     @Override
                                     public void onResponse(MessageResponse response) {
@@ -133,6 +134,9 @@ public class MainActivity extends AppCompatActivity {
                                         if(length>1) {
                                             for (int i = 0; i < length; i++) {
                                                 outputText += '\n' + response.getText().get(i).trim();
+                                            }
+                                            if(outputText == "You should meet with a Asthma Specialist. Please go to Asthma Specialist list option , select one and get appointment by phone call."){
+                                                btnInvisisble.setVisibility(View.VISIBLE);
                                             }
                                             ///Toast.makeText(MainActivity.this, outputText, Toast.LENGTH_SHORT).show();
                                         }
