@@ -13,7 +13,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Asthma extends AppCompatActivity {
+public class Asthma extends BaseActivity {
 
     RecyclerView recyclerView;
     DoctorShowAdapter doctorShowAdapter;
@@ -29,14 +29,14 @@ public class Asthma extends AppCompatActivity {
 
         recyclerView=findViewById(R.id.asthmaDocRecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         list1 = new ArrayList<DoctorModel>();
         list2=new ArrayList<String>();
+        list2=Singleton.getInstance().getFrameList();
 
         list1.clear();
         for(int i=0;i<=list2.size()-1;i++) {
             String s= list2.get(i);
-            databaseReference2 = FirebaseDatabase.getInstance().getReference().child("DoctorList").child(s).child("Astma");
+            databaseReference2 = FirebaseDatabase.getInstance().getReference().child("DoctorList").child(s).child("asthma");
             databaseReference2.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {

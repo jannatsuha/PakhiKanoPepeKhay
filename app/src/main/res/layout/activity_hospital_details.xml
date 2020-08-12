@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HospitalDetailsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnNearby"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:outlineProvider="paddedBounds"
+            android:text="         Nearby Hospitals"
+            android:textSize="23dp"
+            android:clickable="true"
+            android:layout_margin="3dp"
+            android:background="@drawable/nbfinal"
+            android:onClick="nearbyHospitals"/>
+        <Button
+            android:id="@+id/btnHospitalAll"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="         All Hospital List"
+            android:textSize="23dp"
+            android:layout_margin="3dp"
+            android:outlineProvider="paddedBounds"
+            android:background="@drawable/hlfinal"
+            android:onClick="allHospitalLists"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_weight="22"
+            android:textAlignment="center"
+            android:background="#ecf9fa"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:id="@+id/hospitalListRecyclarView">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

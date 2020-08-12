@@ -14,19 +14,21 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class DoctorListAdapter extends RecyclerView.Adapter<com.example.admin.virtualdoctor.DoctorListAdapter.MyViewHolder> {
+public class DoctorListAdapter extends RecyclerView.Adapter<com.example.admin.virtualdoctor.DoctorListAdapter.MyViewHolder> implements Filterable {
 
         Context context;
         ArrayList<String> strings;
         ArrayList<String> stringsCopy;
         ArrayList<String> results;
+        ArrayList<String> filterList;
 
         public DoctorListAdapter(Context context1, ArrayList<String>strings1)
         {
 
             context=context1;
-            strings=strings1;
+            this.strings=strings1;
             stringsCopy=strings1;
+            this.filterList=strings1;
         }
         @Override
         public com.example.admin.virtualdoctor.DoctorListAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -36,13 +38,44 @@ public class DoctorListAdapter extends RecyclerView.Adapter<com.example.admin.vi
         @Override
         public void onBindViewHolder(com.example.admin.virtualdoctor.DoctorListAdapter.MyViewHolder holder, int position) {
 
-            holder.btnSpcListName.setText(strings.get(position).toString());
+            holder.btnSpcListName.setText(filterList.get(position).toString());
 
         }
         @Override
         public int getItemCount() {
-            return strings.size();
+            return filterList.size();
         }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String quertString= charSequence.toString();
+                if(quertString.isEmpty())
+                    filterList=strings;
+                else {
+                    ArrayList<String> stringtemp= new ArrayList<>();
+                    for(String s: strings){
+                        if(s.toLowerCase().contains(quertString.toLowerCase())){
+                            stringtemp.add(s);
+                        }
+
+                    }
+                    filterList=stringtemp;
+                }
+                FilterResults filterResults= new FilterResults();
+                filterResults.values=filterList;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                filterList= (ArrayList<String>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
 
 
     class MyViewHolder extends RecyclerView.ViewHolder {
@@ -102,6 +135,62 @@ public class DoctorListAdapter extends RecyclerView.Adapter<com.example.admin.vi
 
                         }else if(getLayoutPosition()==11){
                             Intent i = new Intent(context,Eye.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==12){
+                            Intent i = new Intent(context,ENT.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==13){
+                            Intent i = new Intent(context,Gynaecology.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==14){
+                            Intent i = new Intent(context,Gastrology.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==15){
+                            Intent i = new Intent(context,Haematology.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==16){
+                            Intent i = new Intent(context,Kidney.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==17){
+                            Intent i = new Intent(context,Liver.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==18){
+                            Intent i = new Intent(context,Medicine.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==19){
+                            Intent i = new Intent(context,NeuroMedicine.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==20){
+                            Intent i = new Intent(context,NeuroSurgeon.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==21){
+                            Intent i = new Intent(context,Nutritionist.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==22){
+                            Intent i = new Intent(context,Orthopaedics.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==23){
+                            Intent i = new Intent(context,Psychologist.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==24){
+                            Intent i = new Intent(context,Rheumatology.class);
+                            context.startActivity(i);
+
+                        }else if(getLayoutPosition()==25){
+                            Intent i = new Intent(context,Urology.class);
                             context.startActivity(i);
 
                         }

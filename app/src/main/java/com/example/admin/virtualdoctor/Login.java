@@ -1,5 +1,6 @@
 package com.example.admin.virtualdoctor;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -28,6 +29,7 @@ public class Login extends AppCompatActivity {
     TextView errortxt,forgotPass;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
+    private ProgressDialog mProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,12 @@ public class Login extends AppCompatActivity {
         errortxt = findViewById(R.id.errorText);
         forgotPass = findViewById(R.id.forgotPass);
 
+        mProgress = new ProgressDialog(this);
+        mProgress.setTitle("Processing...");
+        mProgress.setMessage("Please wait...");
+        mProgress.setCancelable(false);
+        mProgress.setIndeterminate(true);
+
     }
 
     @Override
@@ -53,7 +61,7 @@ public class Login extends AppCompatActivity {
          user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // User is signed in
-            Intent i = new Intent(Login.this, MenuSelection.class);
+            Intent i = new Intent(Login.this, MainActivity.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(i);
         } else {
@@ -61,11 +69,15 @@ public class Login extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mProgress.show();
+
                 final String email = etEmail.getText().toString();
                 final String pass = etPass.getText().toString();
                 if (email.isEmpty()) {
+                    mProgress.dismiss();
                     etEmail.setError(getText(R.string.ErrorLog));
                 } else if (pass.isEmpty()) {
+                    mProgress.dismiss();
                     etPass.setError(getText(R.string.ErrorLog2));
                 }else{
                     firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
@@ -74,10 +86,14 @@ public class Login extends AppCompatActivity {
                             if (task.isSuccessful()) {
 
                                 user = firebaseAuth.getCurrentUser();
+                                mProgress.dismiss();
                                 Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                Intent intent1 = new Intent(Login.this, MenuSelection.class);
+                                Intent intent1 = new Intent(Login.this, MainActivity.class);
                                 startActivity(intent1);
                             } else {
+                                mProgress.dismiss();
+                                Toast.makeText(getApplicationContext(), "No such user", Toast.LENGTH_LONG).show();
+
                                 errortxt.setText("Login Failed");
                                 errortxt.setVisibility(View.VISIBLE);
                             }

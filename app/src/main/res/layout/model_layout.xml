@@ -23,10 +23,10 @@
                 android:id="@+id/textByMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="6"
+                android:layout_marginTop="0dp"
+                android:layout_weight="15"
                 android:background="@drawable/rounded_corner"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:text="111111"
                 android:textColor="#000" />
 
@@ -38,7 +38,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="0dp"
                 android:layout_weight="1"
-                android:src="@drawable/finalrobo3" />
+                android:src="@mipmap/avatar1" />
 
         </LinearLayout>
 
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout1"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -56,7 +56,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="0dp"
                 android:layout_weight="1"
-                android:src="@drawable/finalrobot1" />
+                android:src="@mipmap/chatrobot1" />
 
 
             <TextView
@@ -64,9 +64,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_weight="6"
+                android:layout_weight="15"
                 android:background="@drawable/rounded_corner1"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:text="222222"
                 android:textColor="#000" />
 

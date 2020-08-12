@@ -3,22 +3,31 @@
     package="com.example.admin.virtualdoctor">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".Myapplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launchernn"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Theme.Design.NoActionBar"/>
         <activity
             android:name=".Signup"
-            android:noHistory="true" />
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
             android:name=".Login"
-            android:noHistory="true" />
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
             android:name=".Splash_Activity"
             android:noHistory="true">
@@ -28,25 +37,100 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuSelection" />
-        <activity android:name=".SpecialistsNameActivity" />
+        <activity android:name=".MenuSelection"
+            android:theme="@style/AppTheme3"/>
+        <activity android:name=".SpecialistsNameActivity"
+            />
         <activity
             android:name=".Anesthesiology"
             android:noHistory="true" />
-        <activity android:name=".BurnAndSurgery" />
+        <activity
+            android:name=".BurnAndSurgery"
+            android:noHistory="true" />
         <activity android:name=".WebViewPage" />
         <activity android:name=".Temp_Doctor_Add" />
-        <activity android:name=".BreastSurgeon" />
-        <activity android:name=".Cardiology" />
-        <activity android:name=".Cancer" />
-        <activity android:name=".CardiovascularAndThoracicSurgeon" />
-        <activity android:name=".Asthma" />
-        <activity android:name=".PediatricCardiology" />
-        <activity android:name=".ColorectalSurgery" />
-        <activity android:name=".Dental" />
-        <activity android:name=".Dermatology" />
-        <activity android:name=".Diabetes" />
-        <activity android:name=".Eye"></activity>
+        <activity
+            android:name=".BreastSurgeon"
+            android:noHistory="true" />
+        <activity
+            android:name=".Cardiology"
+            android:noHistory="true" />
+        <activity
+            android:name=".Cancer"
+            android:noHistory="true" />
+        <activity
+            android:name=".CardiovascularAndThoracicSurgeon"
+            android:noHistory="true" />
+        <activity
+            android:name=".Asthma"
+            android:noHistory="true" />
+        <activity
+            android:name=".PediatricCardiology"
+            android:noHistory="true" />
+        <activity
+            android:name=".ColorectalSurgery"
+            android:noHistory="true" />
+        <activity
+            android:name=".Dental"
+            android:noHistory="true" />
+        <activity
+            android:name=".Dermatology"
+            android:noHistory="true" />
+        <activity
+            android:name=".Diabetes"
+            android:noHistory="true" />
+        <activity
+            android:name=".Eye"
+            android:noHistory="true" />
+        <activity
+            android:name=".ENT"
+            android:noHistory="true" />
+        <activity
+            android:name=".Gynaecology"
+            android:noHistory="true" />
+        <activity
+            android:name=".Gastrology"
+            android:noHistory="true" />
+        <activity
+            android:name=".Haematology"
+            android:noHistory="true" />
+        <activity
+            android:name=".Kidney"
+            android:noHistory="true" />
+        <activity
+            android:name=".Liver"
+            android:noHistory="true" />
+        <activity
+            android:name=".Medicine"
+            android:noHistory="true" />
+        <activity
+            android:name=".NeuroMedicine"
+            android:noHistory="true" />
+        <activity
+            android:name=".NeuroSurgeon"
+            android:noHistory="true" />
+        <activity
+            android:name=".Nutritionist"
+            android:noHistory="true" />
+        <activity
+            android:name=".Orthopaedics"
+            android:noHistory="true" />
+        <activity
+            android:name=".Psychologist"
+            android:noHistory="true" />
+        <activity
+            android:name=".Rheumatology"
+            android:noHistory="true" />
+        <activity
+            android:name=".Urology"
+            android:noHistory="true" />
+        <activity android:name=".HospitalDetailsActivity"
+            />
+        <activity android:name=".NearbyHospitalMap" />
+        <activity android:name=".Ambulance" />
+        <activity android:name=".BloodBank" />
+        <activity android:name=".BaseActivity"
+          ></activity>
     </application>
 
 </manifest>

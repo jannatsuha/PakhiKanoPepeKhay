@@ -3,10 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/aihealth5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/chatbot_background"
     tools:context=".MainActivity">
 
+
     <LinearLayout
+        android:id="@+id/layout_lin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -21,19 +24,25 @@
 
         <Button
             android:id="@+id/invisibleButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
             android:gravity="center"
-            android:textSize="10sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:textSize="12sp"
+            android:textColor="#201f1f"
+            android:background="@drawable/shape_circle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_gravity="center"
-            android:visibility="invisible"
-            android:text="Click here for Specialists"/>
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_marginBottom="3dp"
+            android:onClick="GotoSpecialistsOption"
+            android:text=" Click here for Specialists list "/>
 
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content"

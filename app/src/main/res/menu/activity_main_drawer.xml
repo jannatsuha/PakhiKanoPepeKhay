@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_chatbot"
+            android:icon="@drawable/baseline_question_answer_black_18dp"
+            android:title="@string/nav_Chatbot" />
+        <item
+            android:id="@+id/nav_specialists"
+            android:icon="@drawable/baseline_assignment_ind_black_18dp"
+            android:title="@string/nav_Specialists" />
+
+        <item
+            android:id="@+id/nav_Hospitals"
+            android:icon="@drawable/baseline_account_balance_black_18dp"
+            android:title="@string/nav_Hospitals" />
+        <item
+            android:id="@+id/nav_ambulance"
+            android:icon="@drawable/sharp_commute_black_18dp"
+            android:title="@string/nav_Ambulance" />
+
+        <item
+            android:id="@+id/nav_Bloodbank"
+            android:icon="@drawable/sharp_opacity_black_18dp"
+            android:title="@string/nav_Bloodbank" />
+        <item
+            android:id="@+id/nav_medicine"
+            android:icon="@drawable/sharp_assignment_black_18dp"
+            android:title="@string/nav_Medicine" />
+        <item
+            android:id="@+id/nav_Signout"
+            android:icon="@drawable/sharp_exit_to_app_black_18dp"
+            android:title="@string/nav_signout" />
+    </group>
+
+
+    <item android:title="Other"
+        >
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/privacy_policy" />
+        </menu>
+    </item>
+
+</menu>
